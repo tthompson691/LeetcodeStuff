@@ -9,6 +9,7 @@ cheat = False
 
 @time_it
 def reverse_string(s, cheat):
+    print("asdf")
     if cheat:
         s.reverse()
         return
