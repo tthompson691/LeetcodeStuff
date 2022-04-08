@@ -1,6 +1,6 @@
 from wrappers import time_it
 
-
+@time_it
 def last_stone_weight(stones):
     def smash_em(a, b):
         return abs(a-b)

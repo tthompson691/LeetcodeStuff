@@ -1,12 +1,15 @@
+# UNFINISHED
 from wrappers import time_it
-from collections import Counter
 
 @time_it
 def three_sum(arr, target):
     l = 0
     r = len(arr) - 1
+    tupes = 0
     
-    counts = dict(Counter(arr))
+    missing = target - arr[l] - arr[r]
+    if target in arr[(l+1):r]:
+        tupes += 1
     
     counts
 
