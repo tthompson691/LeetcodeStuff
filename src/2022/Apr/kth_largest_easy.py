@@ -6,12 +6,16 @@ class KthLargest:
         self.k = k
         self.nums=nums
         heapq.heapify(self.nums)
+        
+        while len(self.nums) > k:
+            heapq.heappop(self.nums)
     
     def add(self, val):
         heapq.heappush(self.nums, val)
-        kth_largest = heapq.nlargest(self.k, self.nums)[-1]
+        if len(self.nums) > self.k:
+            heapq.heappop(self.heap)
         
-        return kth_largest
+        return self.nums[0]
 
 
 if __name__ == "__main__":
